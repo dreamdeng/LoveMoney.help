@@ -1,0 +1,45 @@
+# Robots.txt for LoveMoney.help
+# Gaming Strategy Website
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Optimize crawl delay for better server performance
+Crawl-delay: 1
+
+# Priority pages for crawling
+Allow: /index.html
+Allow: /guide.html
+Allow: /about.html
+
+# Legal and policy pages
+Allow: /privacy.html
+Allow: /terms.html
+
+# PWA and technical files
+Allow: /manifest.json
+Allow: /service-worker.js
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block common unwanted paths (if they exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.log
+Disallow: /tmp/
+Disallow: /backup/
+
+# Sitemap location
+Sitemap: https://lovemoney.help/sitemap.xml
+
+# Additional directives for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
