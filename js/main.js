@@ -120,6 +120,9 @@ class LoveMoneyApp {
 
     // Event Listeners
     setupEventListeners() {
+        // Mobile navigation
+        this.setupMobileNavigation();
+
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
             if (e.key === 'f' && !e.ctrlKey && !e.metaKey) {
@@ -154,6 +157,64 @@ class LoveMoneyApp {
 
         window.addEventListener('offline', () => {
             this.updateConnectionStatus(false);
+        });
+    }
+
+    setupMobileNavigation() {
+        // Mobile menu toggle functionality
+        window.toggleMobileMenu = () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+
+            if (burger && menu) {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+
+                // Prevent body scrolling when menu is open
+                document.body.style.overflow = menu.classList.contains('is-active') ? 'hidden' : '';
+            }
+        };
+
+        // Close mobile menu when clicking on links
+        const navItems = document.querySelectorAll('.navbar-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const menu = document.querySelector('.navbar-menu');
+                const burger = document.querySelector('.navbar-burger');
+
+                if (menu && burger && menu.classList.contains('is-active')) {
+                    burger.classList.remove('is-active');
+                    menu.classList.remove('is-active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            const navbar = document.querySelector('.navbar');
+            const menu = document.querySelector('.navbar-menu');
+            const burger = document.querySelector('.navbar-burger');
+
+            if (menu && burger && menu.classList.contains('is-active')) {
+                if (!navbar.contains(event.target)) {
+                    burger.classList.remove('is-active');
+                    menu.classList.remove('is-active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+
+        // Handle window resize to close mobile menu
+        window.addEventListener('resize', () => {
+            const menu = document.querySelector('.navbar-menu');
+            const burger = document.querySelector('.navbar-burger');
+
+            if (window.innerWidth > 768 && menu && burger) {
+                burger.classList.remove('is-active');
+                menu.classList.remove('is-active');
+                document.body.style.overflow = '';
+            }
         });
     }
 
