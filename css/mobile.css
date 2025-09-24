@@ -1,0 +1,434 @@
+/* Mobile Optimizations and Responsive Design */
+
+/* Mobile-First Responsive Breakpoints */
+@media (max-width: 640px) {
+  /* Container and Layout */
+  .container {
+    padding: 0 var(--space-sm);
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    padding: var(--space-xl) var(--space-md);
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-md);
+  }
+
+  .hero-title {
+    font-size: var(--text-3xl);
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-lg);
+  }
+
+  .hero-description {
+    font-size: var(--text-base);
+  }
+
+  /* Game Container Mobile */
+  .game-container {
+    height: 60vh;
+    min-height: 400px;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .game-iframe {
+    border-radius: var(--radius-md);
+  }
+
+  /* Game Controls Mobile */
+  .game-header {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: stretch;
+    margin-bottom: var(--space-sm);
+  }
+
+  .game-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .control-btn {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+    padding: var(--space-md) var(--space-sm);
+    font-size: var(--text-sm);
+  }
+
+  .control-btn .btn-text {
+    display: none;
+  }
+
+  .control-btn .btn-icon {
+    font-size: var(--text-lg);
+  }
+
+  /* Info Cards Mobile */
+  .game-info {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .info-card {
+    padding: var(--space-md);
+  }
+
+  .card-title {
+    font-size: var(--text-lg);
+  }
+
+  .card-content {
+    font-size: var(--text-sm);
+  }
+
+  /* Buttons Mobile */
+  .control-buttons {
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .btn {
+    width: 100%;
+    padding: var(--space-md);
+    font-size: var(--text-base);
+    justify-content: center;
+  }
+
+  /* Status Bar Mobile */
+  .status-bar {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .status-content {
+    font-size: var(--text-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Footer Mobile */
+  .site-footer {
+    padding: var(--space-lg) 0;
+    margin-top: var(--space-xl);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .footer-links a {
+    padding: var(--space-sm);
+  }
+
+  /* Loading Overlay Mobile */
+  .loading-content {
+    padding: var(--space-md);
+  }
+
+  .love-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .loading-text {
+    font-size: var(--text-xl);
+  }
+
+  .loading-subtitle {
+    font-size: var(--text-base);
+  }
+
+  /* Error States Mobile */
+  .game-error {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .error-icon {
+    font-size: 3rem;
+  }
+
+  .error-title {
+    font-size: var(--text-xl);
+  }
+
+  .error-message {
+    font-size: var(--text-base);
+  }
+
+  .error-actions {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .error-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .game-container {
+    height: 65vh;
+    min-height: 450px;
+  }
+
+  .game-info {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .control-buttons {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: var(--text-4xl);
+  }
+}
+
+/* Large Screen Optimizations */
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  .game-container {
+    height: 75vh;
+    min-height: 600px;
+  }
+
+  .game-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-section {
+    padding: var(--space-xxl) 0 calc(var(--space-xxl) * 1.5) 0;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger touch targets */
+  .control-btn,
+  .btn,
+  .error-btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  /* Remove hover effects on touch devices */
+  .control-btn:hover,
+  .btn:hover,
+  .info-card:hover,
+  .error-btn:hover {
+    transform: none;
+    box-shadow: initial;
+  }
+
+  /* Touch-friendly spacing */
+  .game-controls {
+    gap: var(--space-md);
+  }
+
+  .control-buttons {
+    gap: var(--space-md);
+  }
+
+  /* Simplified interactions */
+  .compatibility-indicator {
+    position: static;
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .performance-stats {
+    position: static;
+    margin-top: var(--space-md);
+    justify-content: center;
+  }
+}
+
+/* Landscape Mobile Optimizations */
+@media (max-width: 896px) and (orientation: landscape) {
+  .hero-section {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .hero-title {
+    font-size: var(--text-2xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-base);
+  }
+
+  .hero-description {
+    font-size: var(--text-sm);
+  }
+
+  .game-container {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .game-info {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .info-card {
+    padding: var(--space-sm);
+  }
+
+  .card-title {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-sm);
+  }
+
+  .card-content {
+    font-size: var(--text-xs);
+  }
+
+  .control-buttons {
+    flex-direction: row;
+    gap: var(--space-sm);
+  }
+
+  .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--text-sm);
+  }
+}
+
+/* Ultra-wide Screen Support */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .game-container {
+    max-height: 800px;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section::before,
+  .hero-title .emoji,
+  .love-icon,
+  .loading-spinner {
+    animation: none;
+  }
+
+  .info-card:hover,
+  .control-btn:hover,
+  .btn:hover {
+    transform: none;
+  }
+
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .hero-section {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .game-container {
+    border: 2px solid #000;
+  }
+
+  .info-card {
+    border: 2px solid #000;
+    background: #fff;
+  }
+
+  .control-btn,
+  .btn {
+    border: 2px solid #000;
+  }
+
+  .loading-overlay {
+    background: #000;
+    color: #fff;
+  }
+}
+
+/* Dark Mode Support (when implemented) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-dark: #0f0f0f;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --border-light: #404040;
+    --border-medium: #505050;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.4);
+    --shadow-dark: rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  }
+
+  .status-bar.loading {
+    background: linear-gradient(90deg, var(--bg-secondary) 0%, #3a3a3a 50%, var(--bg-secondary) 100%);
+  }
+
+  .status-bar.success {
+    background-color: #1a4a2a;
+  }
+
+  .status-bar.error {
+    background-color: #4a1a1a;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .game-container,
+  .control-buttons,
+  .game-controls,
+  .loading-overlay,
+  .compatibility-indicator,
+  .performance-stats {
+    display: none !important;
+  }
+
+  .hero-section {
+    background: none !important;
+    color: #000 !important;
+  }
+
+  .info-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+}

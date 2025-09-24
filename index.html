@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveMoney - Interactive Moral Choice Game | Play Online</title>
+    <meta name="description" content="Play LoveMoney, a unique clicker RPG exploring moral choices and relationships. Click to earn money, make difficult decisions, and discover multiple endings.">
+    <meta name="keywords" content="love money game, moral choice game, clicker RPG, Harvey game, interactive story">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="LoveMoney - Interactive Moral Choice Game">
+    <meta property="og:description" content="Test your moral boundaries in this unique clicking game. Meet Harvey and discover how far you'll go for money.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    <meta property="og:type" content="game">
+    <meta property="og:url" content="https://lovemoney.help">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LoveMoney - Interactive Moral Choice Game">
+    <meta name="twitter:description" content="Test your moral boundaries in this unique clicking game. Meet Harvey and discover how far you'll go for money.">
+    <meta name="twitter:image" content="/assets/images/og-image.jpg">
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#FF6B6B">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="LoveMoney">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/game-embed.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://lovemoneygame.io">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "LoveMoney",
+        "description": "Interactive moral choice clicker game exploring relationships and money",
+        "gamePlatform": "Web Browser",
+        "genre": ["Role Playing Game", "Simulation", "Clicker Game"],
+        "url": "https://lovemoney.help",
+        "publisher": {
+            "@type": "Organization",
+            "name": "LoveMoney.help"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="emoji">💰</span>
+                    <span class="title-text">LoveMoney</span>
+                </h1>
+                <p class="hero-subtitle">Interactive Moral Choice Game - Click, Choose, Consequences</p>
+                <p class="hero-description">Meet Harvey and discover how far you'll go for money. Every choice matters in this unique clicker RPG exploring morality and relationships.</p>
+            </div>
+        </header>
+
+        <div id="statusBar" class="status-bar loading">
+            <div class="status-content">
+                <span class="status-icon">🔄</span>
+                <span class="status-text">Testing game compatibility...</span>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="game-header">
+                <div class="game-controls">
+                    <button class="control-btn fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen Mode">
+                        <span class="btn-icon">🔥</span>
+                        <span class="btn-text">Fullscreen</span>
+                    </button>
+                    <button class="control-btn reload-btn" onclick="reloadGame()" title="Restart Game">
+                        <span class="btn-icon">🔄</span>
+                        <span class="btn-text">Restart</span>
+                    </button>
+                    <button class="control-btn new-tab-btn" onclick="openInNewTab()" title="Open in New Tab">
+                        <span class="btn-icon">🔗</span>
+                        <span class="btn-text">New Tab</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="loadingOverlay" class="loading-overlay">
+                <div class="loading-content">
+                    <div class="love-icon">💰</div>
+                    <div class="loading-spinner"></div>
+                    <div class="loading-text">Loading Harvey's World...</div>
+                    <div class="loading-subtitle">Preparing your moral journey</div>
+                </div>
+            </div>
+
+            <iframe
+                id="gameFrame"
+                class="game-iframe"
+                src="https://lovemoneygame.io/lovemoney.embed"
+                title="LoveMoney Game - Interactive Moral Choice Clicker"
+                allowfullscreen
+                allow="autoplay; fullscreen; gamepad"
+                loading="lazy">
+                <p>Your browser doesn't support iframes. <a href="https://lovemoneygame.io/lovemoney.embed" target="_blank">Click here to play LoveMoney directly</a>.</p>
+            </iframe>
+        </div>
+
+        <div class="controls-panel">
+            <div class="game-info">
+                <div class="info-card quick-start">
+                    <h3 class="card-title">
+                        <span class="card-icon">🎯</span>
+                        Quick Start
+                    </h3>
+                    <p class="card-content">Click Harvey to earn money. Buy upgrades to increase earnings. Reach $25,000 to complete the game and save Harvey's life.</p>
+                </div>
+
+                <div class="info-card moral-guide">
+                    <h3 class="card-title">
+                        <span class="card-icon">⚖️</span>
+                        Moral Choices
+                    </h3>
+                    <p class="card-content">Every upgrade affects your relationship with Harvey. Your choices determine which of the three endings you'll experience.</p>
+                </div>
+
+                <div class="info-card strategy-tip">
+                    <h3 class="card-title">
+                        <span class="card-icon">🧠</span>
+                        Strategy Tip
+                    </h3>
+                    <p class="card-content">Balance earning speed with moral consequences. Higher upgrades earn more money but reduce your moral score significantly.</p>
+                </div>
+            </div>
+
+            <div class="control-buttons">
+                <a href="/guide.html" class="btn btn-primary">
+                    <span class="btn-icon">📖</span>
+                    <span class="btn-text">Complete Guide</span>
+                </a>
+                <a href="/about.html" class="btn btn-secondary">
+                    <span class="btn-icon">ℹ️</span>
+                    <span class="btn-text">About Game</span>
+                </a>
+                <button class="btn btn-accent" onclick="shareGame()">
+                    <span class="btn-icon">📱</span>
+                    <span class="btn-text">Share Game</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Enhanced experience for <a href="https://lovemoneygame.io" target="_blank" rel="noopener">LoveMoney</a> -
+                    A moral choice game by the original developers
+                </p>
+                <div class="footer-links">
+                    <a href="/privacy.html">Privacy</a>
+                    <a href="/terms.html">Terms</a>
+                    <a href="/guide.html">Guide</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+    <script src="/js/game-embed.js"></script>
+    <script src="/js/compatibility.js"></script>
+    <script src="/js/analytics.js"></script>
+</body>
+</html>
