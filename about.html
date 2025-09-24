@@ -25,7 +25,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/mobile.css">
 
     <!-- Schema.org for About Page -->
     <script type="application/ld+json">
@@ -47,7 +46,38 @@
     </script>
 </head>
 <body>
-    <div class="container">
+    <div class="page-wrapper">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-brand">
+                    <a href="/" class="brand-link">
+                        <span class="brand-text">LoveMoney.help</span>
+                    </a>
+                </div>
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a href="/" class="navbar-item">Home</a>
+                        <a href="/guide.html" class="navbar-item">Strategy Guide</a>
+                        <a href="/about.html" class="navbar-item active">About</a>
+                        <a href="https://lovemoneygame.io" target="_blank" class="navbar-item">Original Game</a>
+                    </div>
+                    <div class="navbar-end">
+                        <a href="https://lovemoneygame.io/lovemoney.embed" target="_blank" class="navbar-button">
+                            <span class="button-icon">▶</span>
+                            <span class="button-text">Play Now</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-burger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container" style="padding-top: 64px;">
         <!-- Navigation Header -->
         <header class="page-header">
             <nav class="page-nav">
