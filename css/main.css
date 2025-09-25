@@ -578,7 +578,6 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: rgba(255, 255, 255, 0.95);
   color: var(--primary);
   border: none;
   border-radius: var(--radius-full);
